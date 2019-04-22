@@ -4,6 +4,7 @@ date = 1994-12-01T18:58:00-05:00
 tags = []
 categories = ["resources"]
 draft = false
+mathjax = 't'
 +++
 
 A list of useful links, in no particular order.
