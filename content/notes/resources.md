@@ -87,3 +87,6 @@ A list of useful links, in no particular order.
 [spaCy Course](https://course.spacy.io/)  
 [python algorithms](https://github.com/keon/algorithms)  
 
+
+### Interesting Math  
+[\\(\prod(p^2+1)/(p^2-1)\))](https://mathoverflow.net/questions/164092/computing-prod-p-fracp2-1p21-without-the-zeta-function)
