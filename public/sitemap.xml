@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/</loc>
+    <lastmod>2018-05-02T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/categories/</loc>
+    <lastmod>2018-05-02T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/notes/</loc>
+    <lastmod>2018-05-02T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/tags/</loc>
+    <lastmod>2018-05-02T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/tags/awk/</loc>
+    <lastmod>2018-05-02T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/notes/dee/</loc>
+    <lastmod>2018-05-02T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/categories/unix/</loc>
+    <lastmod>2018-05-02T00:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/posts/demo/</loc>
+    <lastmod>2018-02-02T18:58:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/posts/</loc>
+    <lastmod>2018-02-02T18:58:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/categories/emacs/</loc>
+    <lastmod>2018-02-02T18:58:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/tags/html/</loc>
+    <lastmod>2018-02-02T18:58:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/tags/hugo/</loc>
+    <lastmod>2018-02-02T18:58:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/tags/latex/</loc>
+    <lastmod>2018-02-02T18:58:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/categories/org/</loc>
+    <lastmod>2018-02-02T18:58:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/search/</loc>
+    <priority>0.1</priority>
+  </url>
+  
+  <url>
+    <loc>https://randomwalk94.github.io/refined/series/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

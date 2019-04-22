@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+    
+    
+    
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+
+    
+    <meta name="referrer" content="no-referrer">
+
+    <title>
+        
+            awk ❚ A Random Blog
+        
+    </title>
+
+    
+    
+
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+    <style>
+     
+     
+     :root {
+         --theme-color: #ac4142;
+         --theme-color-light: rgba(172, 65, 66, 0.2);
+     }
+     
+     html {
+         line-height: 1.5;
+     }
+    </style>
+
+    
+    
+
+    
+    
+    
+    
+    <link rel="stylesheet" href="/refined/css/refined.min.78106e984546827c1831be393e4d1a1a99fed12535ab8441a8bac8fd572f6c7a.css">
+    
+    <link rel="preload" href="/refined/css/refined.min.78106e984546827c1831be393e4d1a1a99fed12535ab8441a8bac8fd572f6c7a.css" as="style">
+
+    
+
+
+
+    
+        <style>
+         
+         /* Background */ .chroma { background-color: #ffffff }
+/* Error */ .chroma .err { color: #a61717; background-color: #e3d2d2 }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
+/* LineHighlight */ .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
+/* LineNumbersTable */ .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+/* LineNumbers */ .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+/* Keyword */ .chroma .k { color: #000000; font-weight: bold }
+/* KeywordConstant */ .chroma .kc { color: #000000; font-weight: bold }
+/* KeywordDeclaration */ .chroma .kd { color: #000000; font-weight: bold }
+/* KeywordNamespace */ .chroma .kn { color: #000000; font-weight: bold }
+/* KeywordPseudo */ .chroma .kp { color: #000000; font-weight: bold }
+/* KeywordReserved */ .chroma .kr { color: #000000; font-weight: bold }
+/* KeywordType */ .chroma .kt { color: #445588; font-weight: bold }
+/* NameAttribute */ .chroma .na { color: #008080 }
+/* NameBuiltin */ .chroma .nb { color: #0086b3 }
+/* NameBuiltinPseudo */ .chroma .bp { color: #999999 }
+/* NameClass */ .chroma .nc { color: #445588; font-weight: bold }
+/* NameConstant */ .chroma .no { color: #008080 }
+/* NameDecorator */ .chroma .nd { color: #3c5d5d; font-weight: bold }
+/* NameEntity */ .chroma .ni { color: #800080 }
+/* NameException */ .chroma .ne { color: #990000; font-weight: bold }
+/* NameFunction */ .chroma .nf { color: #990000; font-weight: bold }
+/* NameLabel */ .chroma .nl { color: #990000; font-weight: bold }
+/* NameNamespace */ .chroma .nn { color: #555555 }
+/* NameTag */ .chroma .nt { color: #000080 }
+/* NameVariable */ .chroma .nv { color: #008080 }
+/* NameVariableClass */ .chroma .vc { color: #008080 }
+/* NameVariableGlobal */ .chroma .vg { color: #008080 }
+/* NameVariableInstance */ .chroma .vi { color: #008080 }
+/* LiteralString */ .chroma .s { color: #dd1144 }
+/* LiteralStringAffix */ .chroma .sa { color: #dd1144 }
+/* LiteralStringBacktick */ .chroma .sb { color: #dd1144 }
+/* LiteralStringChar */ .chroma .sc { color: #dd1144 }
+/* LiteralStringDelimiter */ .chroma .dl { color: #dd1144 }
+/* LiteralStringDoc */ .chroma .sd { color: #dd1144 }
+/* LiteralStringDouble */ .chroma .s2 { color: #dd1144 }
+/* LiteralStringEscape */ .chroma .se { color: #dd1144 }
+/* LiteralStringHeredoc */ .chroma .sh { color: #dd1144 }
+/* LiteralStringInterpol */ .chroma .si { color: #dd1144 }
+/* LiteralStringOther */ .chroma .sx { color: #dd1144 }
+/* LiteralStringRegex */ .chroma .sr { color: #009926 }
+/* LiteralStringSingle */ .chroma .s1 { color: #dd1144 }
+/* LiteralStringSymbol */ .chroma .ss { color: #990073 }
+/* LiteralNumber */ .chroma .m { color: #009999 }
+/* LiteralNumberBin */ .chroma .mb { color: #009999 }
+/* LiteralNumberFloat */ .chroma .mf { color: #009999 }
+/* LiteralNumberHex */ .chroma .mh { color: #009999 }
+/* LiteralNumberInteger */ .chroma .mi { color: #009999 }
+/* LiteralNumberIntegerLong */ .chroma .il { color: #009999 }
+/* LiteralNumberOct */ .chroma .mo { color: #009999 }
+/* Operator */ .chroma .o { color: #000000; font-weight: bold }
+/* OperatorWord */ .chroma .ow { color: #000000; font-weight: bold }
+/* Comment */ .chroma .c { color: #999988; font-style: italic }
+/* CommentHashbang */ .chroma .ch { color: #999988; font-style: italic }
+/* CommentMultiline */ .chroma .cm { color: #999988; font-style: italic }
+/* CommentSingle */ .chroma .c1 { color: #999988; font-style: italic }
+/* CommentSpecial */ .chroma .cs { color: #999999; font-weight: bold; font-style: italic }
+/* CommentPreproc */ .chroma .cp { color: #999999; font-weight: bold; font-style: italic }
+/* CommentPreprocFile */ .chroma .cpf { color: #999999; font-weight: bold; font-style: italic }
+/* GenericDeleted */ .chroma .gd { color: #000000; background-color: #ffdddd }
+/* GenericEmph */ .chroma .ge { color: #000000; font-style: italic }
+/* GenericError */ .chroma .gr { color: #aa0000 }
+/* GenericHeading */ .chroma .gh { color: #999999 }
+/* GenericInserted */ .chroma .gi { color: #000000; background-color: #ddffdd }
+/* GenericOutput */ .chroma .go { color: #888888 }
+/* GenericPrompt */ .chroma .gp { color: #555555 }
+/* GenericStrong */ .chroma .gs { font-weight: bold }
+/* GenericSubheading */ .chroma .gu { color: #aaaaaa }
+/* GenericTraceback */ .chroma .gt { color: #aa0000 }
+/* GenericUnderline */ .chroma .gl { text-decoration: underline }
+/* TextWhitespace */ .chroma .w { color: #bbbbbb }
+
+         
+         /* Overrides on top of the theme and Chroma CSS */
+/* Chroma-based lines highlighting in code blocks */
+.chroma .hl {
+    background-color: #e8e8e8;
+    /* Extend highlight up to 100 characters (assuming that the code blocks never have more than 100 characters in a line) */
+    min-width: 100ch;
+}
+/* GenericHeading */ .chroma .gh { color: #999999; font-weight: bold }
+/* GenericSubheading */ .chroma .gu { color: #aaaaaa; font-weight: bold }
+
+         
+        </style>
+    
+
+    
+
+    
+    
+    
+
+    
+    <script src="/refined/js/responsive-nav-orig.min.355eebd835ac8071d56b337f68ffbbddc0f6487625599895e3e0b0461e791ebb.js"></script>
+    
+    <link rel="preload" href="/refined/js/responsive-nav-orig.min.355eebd835ac8071d56b337f68ffbbddc0f6487625599895e3e0b0461e791ebb.js" as="script">
+
+    
+    
+    <script defer src="/refined/js/libs/fa/fontawesome-all.min.78bd3583027f40ce4330d39e1f1df56bda5f4af819aac2d0214ba529918c9e95.js"></script>
+    
+    <link rel="preload" href="/refined/js/libs/fa/fontawesome-all.min.78bd3583027f40ce4330d39e1f1df56bda5f4af819aac2d0214ba529918c9e95.js" as="script">
+
+    
+
+    
+    
+    
+
+    
+    
+<!-- rel="me" links for IndieAuth -->
+
+<link href="https://github.com/kaushalmodi/" rel="me"><link href="https://mastodon.technology/@kaushalmodi" rel="me">
+
+
+    
+    
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth" data-proofer-ignore>
+    
+    
+    <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+
+
+
+
+    
+ 
+<meta property="og:title" content="awk" />
+<meta property="og:description"
+      content="Collection of awk examples." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://randomwalk94.github.io/refined/notes/dee/" />
+
+
+    
+        <meta property="article:published_time" content="2018-05-02T00:00:00-04:00"/>
+    
+    
+        <meta property="article:modified_time" content="2018-05-02T00:00:00-04:00"/>
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+     <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="awk"/>
+<meta name="twitter:description" content="Collection of awk examples."/>
+
+
+    
+    
+    
+     
+
+
+
+    
+    
+    
+        
+    
+
+
+     
+        
+        <meta name="DC.Creator" content="Kaushal Modi"/>
+    
+
+
+
+    
+    
+    
+    <meta name="hugo-build-date" content=""/>
+    <meta name="hugo-commit-hash" content=""/>
+    <meta name="generator" content="Hugo 0.55.0" />
+</head>
+
+
+    <body lang="en">
+
+        
+        <div class="border" id="home"></div>
+
+        <div class="wrapper">   
+            
+<nav id="nav" class="nav-collapse opened" aria-hidden="false">
+    <ul class="navbar">
+        <li><a class="" href="/">Home</a></li>
+        
+            
+                <li><a class="" href="https://randomwalk94.github.io/refined/posts/">Posts</a></li>
+            
+        
+            
+                <li><a class="" href="https://randomwalk94.github.io/refined/notes/">Notes</a></li>
+            
+        
+        
+            <li><a class="" href="https://randomwalk94.github.io/refined/search/">Search</a></li>
+        
+    </ul>
+</nav>
+
+            <div class="container">
+                <header class="masthead">
+                    <div class="masthead-title no-text-decoration">
+                        <a href="/">A Random Blog</a> <span class="blinking-cursor">❚</span>
+                    </div>
+                    <div class="masthead-tagline">
+                        My random notes
+                    </div>
+                </header>
+
+                
+
+
+
+
+
+
+
+
+<article class="post h-entry notes">
+    <header>
+        <div class="center">
+    <div class="taxo no-text-decoration">
+         
+            
+                <ul class="no-bullets inline categories">
+                    
+                        
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            <li class="__unix__"
+                                
+                                
+                                title="This is the only post categorized in ‘unix’"
+                                
+                            >
+                                <a class="p-category" href="https://randomwalk94.github.io/refined/categories/unix/">unix</a>
+                            </li>
+                        
+                    
+                </ul>
+            
+         
+            
+         
+            
+                <ul class="no-bullets inline tags">
+                    
+                        
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            <li class="__awk__"
+                                
+                                
+                                title="This is the only post tagged with ‘awk’"
+                                
+                            >
+                                <a class="p-category" href="https://randomwalk94.github.io/refined/tags/awk/">awk</a>
+                            </li>
+                        
+                    
+                </ul>
+            
+        
+    </div>
+
+</div>
+
+        <h1 class="post-title p-name">awk</h1>
+
+        
+        <data class="u-url" value="https://randomwalk94.github.io/refined/notes/dee/"></data>
+
+        <div class="date-syndication">
+            
+
+
+    
+    
+    <div class="post-date">
+        
+        <time datetime="2018-05-02T00:00:00-0400" class="dt-published">Wed May 2, 2018</time>
+        
+        
+    </div>
+
+
+            
+
+
+
+
+        </div>
+         
+
+
+
+    
+    
+    
+        
+    
+
+
+    
+        
+        <span class="hide">
+            &mdash; <a href="https://randomwalk94.github.io/refined/" class="u-author">Kaushal Modi</a>
+        </span>
+    
+
+
+    </header>
+
+    <div class="content">
+        
+    <div class="description p-summary">
+        
+        
+        
+        
+        
+            
+            
+        
+        <p>Collection of <code>awk</code> examples.</p>
+    </div>
+
+
+
+        
+
+
+
+
+
+                       
+
+
+        <div class="e-content">
+            
+
+
+
+
+
+
+<div class="ox-hugo-toc toc">
+<div></div>
+
+<div class="heading">Table of Contents</div>
+
+<ul>
+<li><a href="#simple-example">Simple example</a></li>
+<li><a href="#the-awk-programming-language">The AWK Programming Language</a>
+
+<ul>
+<li><a href="#an-awk-tutorial">An AWK Tutorial</a>
+
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#simple-output">Simple Output</a></li>
+<li><a href="#fancier-output">Fancier Output</a></li>
+<li><a href="#selection">Selection</a></li>
+<li><a href="#computing-with-awk">Computing with AWK</a></li>
+<li><a href="#control-flow-statements">Control-Flow Statements</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p></div>
+<!--endtoc--></p>
+
+<h2 id="simple-example">Simple example&nbsp;<a class="headline-hash no-text-decoration" href="#simple-example">#</a> </h2>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nb">BEGIN</span> <span class="p">{</span> <span class="kr">print</span> <span class="mi">42</span> <span class="p">}</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">42</code></pre></div>
+<h2 id="the-awk-programming-language">The AWK Programming Language&nbsp;<a class="headline-hash no-text-decoration" href="#the-awk-programming-language">#</a> </h2>
+
+<p>This section contains awk examples and my notes from the <em>The AWK
+Programming Language</em> book by Alfred V. Aho, Brian W. Kernighan and
+Peter J. Weinberger.</p>
+
+<h3 id="an-awk-tutorial">An AWK Tutorial&nbsp;<a class="headline-hash no-text-decoration" href="#an-awk-tutorial">#</a> </h3>
+
+<p><a id="code-snippet--emp-data"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth    4.00   0
+Dan     3.75   0
+Kathy   4.00   10
+Mark    5.00   20
+Mary    5.50   22
+Susie   4.25   18</code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--emp-data">Code Snippet 1</a></span>:
+  Example Input used for examples
+</div>
+
+<h4 id="getting-started">Getting Started&nbsp;<a class="headline-hash no-text-decoration" href="#getting-started">#</a> </h4>
+
+<p><a id="code-snippet--1-1--1"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-1--1">Code Snippet 2</a></span>:
+  Print total salary only for the employees who have worked for non-zero hours
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Kathy 40
+Mark 100
+Mary 121
+Susie 76.5</code></pre></div>
+<p>The <code>,</code> between <code>$1</code> and <code>$2</code> renders as a space in the output by default. That can be changed.</p>
+
+<p><a id="code-snippet--1-1--2"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">1</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-1--2">Code Snippet 3</a></span>:
+  Print employees who did not work
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth
+Dan</code></pre></div>
+<h5 id="the-structure-of-an-awk-program">The Structure of an AWK Program&nbsp;<a class="headline-hash no-text-decoration" href="#the-structure-of-an-awk-program">#</a> </h5>
+
+<p>Each awk program in this chapter is a sequence of one or more pattern-action statements:</p>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">pattern { action }
+pattern { action }
+...</code></pre></div>
+<p>Either the <em>pattern</em> or the <em>action</em> (but not both) in a
+pattern-action statement may be omitted. If a pattern has no action as
+in <a href="#code-snippet--1-1--3">Code Snippet 4</a>, then each line that the pattern matches is printed.</p>
+
+<p><a id="code-snippet--1-1--3"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-1--3">Code Snippet 4</a></span>:
+  Pattern without action
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth    4.00   0
+Dan     3.75   0</code></pre></div>
+<p>And if there is an action with no pattern, then the action is performed for every input line.</p>
+
+<p><a id="code-snippet--1-1--4"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">1</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-1--4">Code Snippet 5</a></span>:
+  Action without pattern
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth
+Dan
+Kathy
+Mark
+Mary
+Susie</code></pre></div>
+<h4 id="simple-output">Simple Output&nbsp;<a class="headline-hash no-text-decoration" href="#simple-output">#</a> </h4>
+
+<h5 id="printing-every-line">Printing Every Line&nbsp;<a class="headline-hash no-text-decoration" href="#printing-every-line">#</a> </h5>
+
+<p><a id="code-snippet--1-2--1"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-2--1">Code Snippet 6</a></span>:
+  Printing every line &#x2013; 1
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth    4.00   0
+Dan     3.75   0
+Kathy   4.00   10
+Mark    5.00   20
+Mary    5.50   22
+Susie   4.25   18</code></pre></div>
+<p><a id="code-snippet--1-2--2"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">0</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-2--2">Code Snippet 7</a></span>:
+  Printing every line &#x2013; 2
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth    4.00   0
+Dan     3.75   0
+Kathy   4.00   10
+Mark    5.00   20
+Mary    5.50   22
+Susie   4.25   18</code></pre></div>
+<h5 id="printing-certain-fields">Printing Certain Fields&nbsp;<a class="headline-hash no-text-decoration" href="#printing-certain-fields">#</a> </h5>
+
+<p><a id="code-snippet--1-2--3"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">$</span><span class="mi">3</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-2--3">Code Snippet 8</a></span>:
+  Printing certain fields
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth 0
+Dan 0
+Kathy 10
+Mark 20
+Mary 22
+Susie 18</code></pre></div>
+<h5 id="nf-the-number-of-fields"><code>NF</code>, the Number of Fields&nbsp;<a class="headline-hash no-text-decoration" href="#nf-the-number-of-fields">#</a> </h5>
+
+<p><a id="code-snippet--1-2--4"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="nb">NF</span><span class="p">,</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">$</span><span class="nb">NF</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-2--4">Code Snippet 9</a></span>:
+  Print number of fields, first field and <i>last field</i> for each input line
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">3 Beth 0
+3 Dan 0
+3 Kathy 10
+3 Mark 20
+3 Mary 22
+3 Susie 18</code></pre></div>
+<h5 id="computing-and-printing">Computing and Printing&nbsp;<a class="headline-hash no-text-decoration" href="#computing-and-printing">#</a> </h5>
+
+<p><a id="code-snippet--1-2--5"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-2--5">Code Snippet 10</a></span>:
+  Do computations on field values
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth 0
+Dan 0
+Kathy 40
+Mark 100
+Mary 121
+Susie 76.5</code></pre></div>
+<h5 id="printing-line-numbers">Printing Line Numbers&nbsp;<a class="headline-hash no-text-decoration" href="#printing-line-numbers">#</a> </h5>
+
+<p><a id="code-snippet--1-2--6"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="nb">NR</span><span class="p">,</span> <span class="o">$</span><span class="mi">0</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-2--6">Code Snippet 11</a></span>:
+  <code>NR</code>, Number of lines Read
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">1 Beth    4.00   0
+2 Dan     3.75   0
+3 Kathy   4.00   10
+4 Mark    5.00   20
+5 Mary    5.50   22
+6 Susie   4.25   18</code></pre></div>
+<h5 id="putting-text-in-the-output">Putting Text in the Output&nbsp;<a class="headline-hash no-text-decoration" href="#putting-text-in-the-output">#</a> </h5>
+
+<p><a id="code-snippet--1-2--7"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="s2">&#34;total pay for&#34;</span><span class="p">,</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;is&#34;</span><span class="p">,</span> <span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-2--7">Code Snippet 12</a></span>:
+  Concatenating text in the output
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">total pay for Beth is 0
+total pay for Dan is 0
+total pay for Kathy is 40
+total pay for Mark is 100
+total pay for Mary is 121
+total pay for Susie is 76.5</code></pre></div>
+<h4 id="fancier-output">Fancier Output&nbsp;<a class="headline-hash no-text-decoration" href="#fancier-output">#</a> </h4>
+
+<ul>
+<li>The <code>print</code> statement is for quick and easy output.</li>
+<li>The <code>printf</code> statement is used if you need to format the output exactly the way you want.</li>
+</ul>
+
+<h5 id="lining-up-fields">Lining Up Fields&nbsp;<a class="headline-hash no-text-decoration" href="#lining-up-fields">#</a> </h5>
+
+<p>With <code>printf</code>, no blanks or newlines are produced automatically; you
+need to create them yourself. <em>Note the <code>\n</code> in the <code>printf</code> statement
+in <a href="#code-snippet--1-3--1">Code Snippet 13</a>.</em></p>
+
+<p><a id="code-snippet--1-3--1"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">printf</span><span class="p">(</span><span class="s2">&#34;total pay for %s is $%.2f\n&#34;</span><span class="p">,</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-3--1">Code Snippet 13</a></span>:
+  <code>printf</code> example
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">total pay for Beth is $0.00
+total pay for Dan is $0.00
+total pay for Kathy is $40.00
+total pay for Mark is $100.00
+total pay for Mary is $121.00
+total pay for Susie is $76.50</code></pre></div>
+<p><a id="code-snippet--1-3--2"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">printf</span><span class="p">(</span><span class="s2">&#34;%-8s $%6.2f\n&#34;</span><span class="p">,</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-3--2">Code Snippet 14</a></span>:
+  Justification using <code>printf</code>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth     $  0.00
+Dan      $  0.00
+Kathy    $ 40.00
+Mark     $100.00
+Mary     $121.00
+Susie    $ 76.50</code></pre></div>
+<h4 id="selection">Selection&nbsp;<a class="headline-hash no-text-decoration" href="#selection">#</a> </h4>
+
+<h5 id="selection-by-comparison">Selection by Comparison&nbsp;<a class="headline-hash no-text-decoration" href="#selection-by-comparison">#</a> </h5>
+
+<p><a id="code-snippet--1-4--1"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">5</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--1">Code Snippet 15</a></span>:
+  awk program with just a comparison pattern
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Mark    5.00   20
+Mary    5.50   22</code></pre></div>
+<h5 id="selection-by-computation">Selection by Computation&nbsp;<a class="headline-hash no-text-decoration" href="#selection-by-computation">#</a> </h5>
+
+<p><a id="code-snippet--1-4--2"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">50</span> <span class="p">{</span> <span class="kr">printf</span><span class="p">(</span><span class="s2">&#34;$%.2f for %s\n&#34;</span><span class="p">,</span> <span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span><span class="p">,</span> <span class="o">$</span><span class="mi">1</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--2">Code Snippet 16</a></span>:
+  Print details only for employees making more than $50
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">$100.00 for Mark
+$121.00 for Mary
+$76.50 for Susie</code></pre></div>
+<h5 id="selection-by-text-content">Selection by Text Content&nbsp;<a class="headline-hash no-text-decoration" href="#selection-by-text-content">#</a> </h5>
+
+<p><a id="code-snippet--1-4--3"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">1</span> <span class="o">==</span> <span class="s2">&#34;Susie&#34;</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--3">Code Snippet 17</a></span>:
+  Literal string match
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Susie   4.25   18</code></pre></div>
+<p><a id="code-snippet--1-4--3--2"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="sr">/y/</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--3--2">Code Snippet 18</a></span>:
+  Regular expression match &#x2013; 1
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Kathy   4.00   10
+Mary    5.50   22</code></pre></div>
+<p>It looks like regular expressions cannot be specified in relation to
+field variables like <code>$1</code>, <code>$2</code>, etc. But I am most likely wrong. For
+instance, the <code>/y.*4/</code> in <a href="#code-snippet--1-4--3--3">Code Snippet 19</a> does a match across fields.</p>
+
+<p><a id="code-snippet--1-4--3--3"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="sr">/y.*4/</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--3--3">Code Snippet 19</a></span>:
+  Regular expression match &#x2013; 2
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Kathy   4.00   10</code></pre></div>
+<h5 id="combinations-of-patterns">Combinations of Patterns&nbsp;<a class="headline-hash no-text-decoration" href="#combinations-of-patterns">#</a> </h5>
+
+<p>Patterns can be combined with parentheses and the logic operators <code>&amp;&amp;</code> (<em>and</em>), <code>||</code> (<em>or</em>) and <code>!</code> (<em>not</em>).</p>
+
+<p><a id="code-snippet--1-4--4"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="o">||</span> <span class="o">$</span><span class="mi">3</span> <span class="o">&gt;=</span> <span class="mi">20</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--4">Code Snippet 20</a></span>:
+  Logical operators in patterns
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth    4.00   0
+Kathy   4.00   10
+Mark    5.00   20
+Mary    5.50   22
+Susie   4.25   18</code></pre></div>
+<p>Above, the lines that match both <code>$2&gt;=4</code> and <code>$3&gt;=20</code> conditions are
+printed just once. But in the case of <a href="#code-snippet--1-4--5">Code Snippet 21</a>, where <em>multiple</em>
+patterns are specified, the program prints a line twice if that line
+matches both the conditions.</p>
+
+<p><a id="code-snippet--1-4--5"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">2</span> <span class="o">&gt;=</span> <span class="mi">4</span>
+<span class="o">$</span><span class="mi">3</span> <span class="o">&gt;=</span> <span class="mi">20</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--5">Code Snippet 21</a></span>:
+  Multiple patterns
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth    4.00   0
+Kathy   4.00   10
+Mark    5.00   20
+Mark    5.00   20
+Mary    5.50   22
+Mary    5.50   22
+Susie   4.25   18</code></pre></div>
+<p><a href="#code-snippet--1-4--6">Code Snippet 22</a> is a De Morgan&rsquo;s law variant of <a href="#code-snippet--1-4--4">Code Snippet 20</a>. Note that
+the results are the exact same.</p>
+
+<p><a id="code-snippet--1-4--6"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">!</span><span class="p">(</span><span class="o">$</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="o">$</span><span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">)</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--6">Code Snippet 22</a></span>:
+  Logical operators in patterns
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth    4.00   0
+Kathy   4.00   10
+Mark    5.00   20
+Mary    5.50   22
+Susie   4.25   18</code></pre></div>
+<h5 id="data-validation">Data Validation&nbsp;<a class="headline-hash no-text-decoration" href="#data-validation">#</a> </h5>
+
+<p>When doing data validation, the lines are printed only when they do not match the desirable properties. Think of this use as that of assertions in SystemVerilog. Below, as any of the lines in the example input do not match the failure conditions, there is no output.</p>
+
+<p><a id="code-snippet--1-4--7"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nb">NF</span> <span class="o">!=</span> <span class="mi">3</span>   <span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;number of fields is not equal to 3&#34;</span> <span class="p">}</span>
+<span class="o">$</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mf">3.35</span> <span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;rate is below minimum wage&#34;</span> <span class="p">}</span>
+<span class="o">$</span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">10</span>   <span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;rate exceeds $10 per hour&#34;</span> <span class="p">}</span>
+<span class="o">$</span><span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">0</span>    <span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;negative hours worked&#34;</span> <span class="p">}</span>
+<span class="o">$</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">60</span>   <span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;too many hours worked&#34;</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--7">Code Snippet 23</a></span>:
+  Data validation or Assertions
+</div>
+
+<h5 id="begin-and-end">BEGIN and END&nbsp;<a class="headline-hash no-text-decoration" href="#begin-and-end">#</a> </h5>
+
+<ul>
+<li>The special pattern <code>BEGIN</code> matches <strong>before the first line</strong> of the first input file is read.</li>
+<li><code>END</code> matches <strong>after the last line</strong> of the last file has been processed.</li>
+</ul>
+
+<p><a id="code-snippet--1-4--8"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nb">BEGIN</span> <span class="p">{</span> <span class="kr">print</span> <span class="s2">&#34;NAME    RATE   HOURS&#34;</span><span class="p">;</span> <span class="kr">print</span> <span class="s2">&#34;&#34;</span> <span class="p">}</span>
+      <span class="p">{</span> <span class="kr">print</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-4--8">Code Snippet 24</a></span>:
+  Using <code>BEGIN</code> to print heading
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">NAME    RATE   HOURS
+
+Beth    4.00   0
+Dan     3.75   0
+Kathy   4.00   10
+Mark    5.00   20
+Mary    5.50   22
+Susie   4.25   18</code></pre></div>
+<p>As noted from <a href="#code-snippet--1-4--8">Code Snippet 24</a>,</p>
+
+<ul>
+<li>You can put several statements on a single line if you separate them by semi-colons.</li>
+<li>The <code>print &quot;&quot;</code> prints a blank line.</li>
+<li>Plain <code>print</code> prints the <strong>whole</strong> line.</li>
+</ul>
+
+<h4 id="computing-with-awk">Computing with AWK&nbsp;<a class="headline-hash no-text-decoration" href="#computing-with-awk">#</a> </h4>
+
+<h5 id="counting">Counting&nbsp;<a class="headline-hash no-text-decoration" href="#counting">#</a> </h5>
+
+<ul>
+<li>The user-created variables are not declared; you just use them.</li>
+<li>The default initial value of variables used as numbers (<code>awk</code> auto-detects that) is 0.</li>
+</ul>
+
+<p><a id="code-snippet--1-5--1"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">15</span> <span class="p">{</span> <span class="nx">emp</span> <span class="o">=</span> <span class="nx">emp</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="nb">END</span>     <span class="p">{</span> <span class="kr">print</span> <span class="nx">emp</span><span class="p">,</span> <span class="s2">&#34;employees worked more than 15 hours&#34;</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-5--1">Code Snippet 25</a></span>:
+  User-created variables
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">3 employees worked more than 15 hours</code></pre></div>
+<h5 id="computing-sums-and-averages">Computing Sums and Averages&nbsp;<a class="headline-hash no-text-decoration" href="#computing-sums-and-averages">#</a> </h5>
+
+<p><a id="code-snippet--1-5--2"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="nb">END</span> <span class="p">{</span> <span class="kr">print</span> <span class="nb">NR</span><span class="p">,</span> <span class="s2">&#34;employees&#34;</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-5--2">Code Snippet 26</a></span>:
+  Print the number of lines
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">6 employees</code></pre></div>
+<p><a id="code-snippet--1-5--3"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk">    <span class="p">{</span> <span class="nx">pay</span> <span class="o">=</span> <span class="nx">pay</span> <span class="o">+</span> <span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span> <span class="p">}</span> <span class="c1"># Nothing is printed by this line; only calculation happens</span>
+<span class="nb">END</span> <span class="p">{</span> <span class="kr">print</span> <span class="nb">NR</span><span class="p">,</span> <span class="s2">&#34;employees&#34;</span>
+      <span class="kr">print</span> <span class="s2">&#34;total pay is&#34;</span><span class="p">,</span> <span class="nx">pay</span>
+      <span class="kr">print</span> <span class="s2">&#34;average pay is&#34;</span><span class="p">,</span> <span class="nx">pay</span><span class="err">/NR</span>
+    <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-5--3">Code Snippet 27</a></span>:
+  Using <code>NR</code> to compute the average pay
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">6 employees
+total pay is 337.5
+average pay is 56.25</code></pre></div>
+<h5 id="handling-text">Handling Text&nbsp;<a class="headline-hash no-text-decoration" href="#handling-text">#</a> </h5>
+
+<p><a id="code-snippet--1-5--4"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">2</span> <span class="o">&gt;</span> <span class="nx">maxrate</span> <span class="p">{</span> <span class="nx">maxrate</span> <span class="o">=</span> <span class="o">$</span><span class="mi">2</span><span class="p">;</span> <span class="nx">maxemp</span> <span class="o">=</span> <span class="o">$</span><span class="mi">1</span> <span class="p">}</span> <span class="c1"># Here maxrate and maxemp variables are updated conditionally; nothing is printed</span>
+<span class="nb">END</span>          <span class="p">{</span> <span class="kr">print</span> <span class="s2">&#34;highest hourly rate:&#34;</span><span class="p">,</span> <span class="nx">maxrate</span><span class="p">,</span> <span class="s2">&#34;for&#34;</span><span class="p">,</span> <span class="nx">maxemp</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-5--4">Code Snippet 28</a></span>:
+  Find the employee who is paid the most per hour
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">highest hourly rate: 5.50 for Mary</code></pre></div>
+<h5 id="string-concatenation">String Concatenation&nbsp;<a class="headline-hash no-text-decoration" href="#string-concatenation">#</a> </h5>
+
+<p><a id="code-snippet--1-5--5"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk">    <span class="p">{</span> <span class="nx">names</span> <span class="o">=</span> <span class="nx">names</span> <span class="o">$</span><span class="mi">1</span> <span class="s2">&#34; &#34;</span> <span class="p">}</span>
+<span class="nb">END</span> <span class="p">{</span> <span class="kr">print</span> <span class="nx">names</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-5--5">Code Snippet 29</a></span>:
+  Concatenate strings with spaces in-between
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth Dan Kathy Mark Mary Susie</code></pre></div>
+<p>Awk automagically figures out that here the <code>names</code> variable is used to hold string and sets its initial value to a <em>null</em> or empty string.</p>
+
+<h5 id="printing-the-last-input-line">Printing the Last Input Line&nbsp;<a class="headline-hash no-text-decoration" href="#printing-the-last-input-line">#</a> </h5>
+
+<ul>
+<li>Although <code>NR</code> retains its values in an <code>END</code> action, <code>$0</code> <strong>does not</strong>.</li>
+</ul>
+
+<p>So in the below code snippet, we use a user-defined variable <code>last</code> to store the <code>$0</code> value of the last line read.</p>
+
+<p><a id="code-snippet--1-5--6"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk">    <span class="p">{</span> <span class="nx">last</span> <span class="o">=</span> <span class="o">$</span><span class="mi">0</span> <span class="p">}</span>
+<span class="nb">END</span> <span class="p">{</span> <span class="kr">print</span> <span class="nx">last</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-5--6">Code Snippet 30</a></span>:
+  Print the last line
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Susie   4.25   18</code></pre></div>
+<h5 id="built-in-functions">Built-in Functions&nbsp;<a class="headline-hash no-text-decoration" href="#built-in-functions">#</a> </h5>
+
+<p><a id="code-snippet--1-5--7"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="p">{</span> <span class="kr">print</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="kr">length</span><span class="p">(</span><span class="o">$</span><span class="mi">1</span><span class="p">)</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-5--7">Code Snippet 31</a></span>:
+  In-built function <code>length</code>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Beth 4
+Dan 3
+Kathy 5
+Mark 4
+Mary 4
+Susie 5</code></pre></div>
+<h5 id="counting-lines-words-and-characters">Counting Lines, Words and Characters&nbsp;<a class="headline-hash no-text-decoration" href="#counting-lines-words-and-characters">#</a> </h5>
+
+<p><a id="code-snippet--1-5--8"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk">    <span class="p">{</span> <span class="nx">nc</span> <span class="o">=</span> <span class="nx">nc</span> <span class="o">+</span> <span class="kr">length</span><span class="p">(</span><span class="o">$</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># the trailing &#34;+ 1&#34; is to count the newline character for each line</span>
+                               <span class="c1"># $0 does not include the newline</span>
+      <span class="nx">nw</span> <span class="o">=</span> <span class="nx">nw</span> <span class="o">+</span> <span class="nb">NF</span>
+    <span class="p">}</span>
+<span class="nb">END</span> <span class="p">{</span> <span class="kr">print</span> <span class="nb">NR</span><span class="p">,</span> <span class="s2">&#34;lines&#34;</span><span class="p">,</span> <span class="nx">nw</span><span class="p">,</span> <span class="s2">&#34;words&#34;</span><span class="p">,</span> <span class="nx">nc</span><span class="p">,</span> <span class="s2">&#34;characters&#34;</span> <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-5--8">Code Snippet 32</a></span>:
+  Count lines, words, chars
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">6 lines 18 words 106 characters</code></pre></div>
+<h4 id="control-flow-statements">Control-Flow Statements&nbsp;<a class="headline-hash no-text-decoration" href="#control-flow-statements">#</a> </h4>
+
+<p><strong>The control flow statements can be used only in actions.</strong></p>
+
+<h5 id="if-else-statement">If-Else Statement&nbsp;<a class="headline-hash no-text-decoration" href="#if-else-statement">#</a> </h5>
+
+<p><a href="#code-snippet--1-6--1">Code Snippet 33</a> is similar to <a href="#code-snippet--1-5--3">Code Snippet 27</a>, but with an <code>if</code> to protect
+against division by zero when computing average.</p>
+
+<p><a id="code-snippet--1-6--1"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="o">$</span><span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">6</span> <span class="p">{</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">pay</span> <span class="o">=</span> <span class="nx">pay</span> <span class="o">+</span> <span class="o">$</span><span class="mi">2</span> <span class="o">*</span> <span class="o">$</span><span class="mi">3</span> <span class="p">}</span>
+<span class="nb">END</span>    <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+           <span class="kr">printf</span><span class="p">(</span><span class="s2">&#34;%d employees, total pay is %.2f, average pay is %.2f&#34;</span><span class="p">,</span>
+                  <span class="nx">n</span><span class="p">,</span> <span class="nx">pay</span><span class="p">,</span> <span class="nx">pay</span><span class="err">/n) # Note that we can continue a long statement over several lines</span>
+                                 <span class="c1"># by breaking it after a comma.</span>
+         <span class="k">else</span>
+           <span class="kr">print</span> <span class="s2">&#34;no employees are paid more than $6/hour&#34;</span>
+       <span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-6--1">Code Snippet 33</a></span>:
+  Sum and average pay of employees making more than $6/hr
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">no employees are paid more than $6/hour</code></pre></div>
+<h5 id="while-statement">While Statement&nbsp;<a class="headline-hash no-text-decoration" href="#while-statement">#</a> </h5>
+
+<p><a id="table--interest1-inp"></a>
+<div class="table-caption">
+  <span class="table-number"><a href="#table--interest1-inp">Table 1</a></span>:
+  Input for interest1 program
+</div></p>
+
+<table>
+<thead>
+<tr>
+<th>1000</th>
+<th>.06</th>
+<th>5</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1000</td>
+<td>.12</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+
+<p><a id="code-snippet--1-6--2"></a></p>
+<div class="highlight"><pre class="chroma"><code class="language-awk" data-lang="awk"><span class="c1"># interest1 - compute compound interest</span>
+<span class="c1">#  input: amount rate years</span>
+<span class="c1">#  output: compounded value at the end of each year</span>
+<span class="p">{</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="kr">printf</span><span class="p">(</span><span class="s2">&#34;Amount = %.2f, Rate = %.2f, Years = %.2f\n&#34;</span><span class="p">,</span> <span class="o">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">$</span><span class="mi">2</span><span class="p">,</span> <span class="o">$</span><span class="mi">3</span><span class="p">)</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;=</span> <span class="o">$</span><span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">printf</span><span class="p">(</span><span class="s2">&#34;\tYear %d: %.2f\n&#34;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="o">$</span><span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="o">$</span><span class="mi">2</span><span class="p">)</span> <span class="o">^</span> <span class="nx">i</span><span class="p">)</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="p">}</span>
+  <span class="kr">print</span> <span class="s2">&#34;&#34;</span>
+<span class="p">}</span></code></pre></div>
+<div class="src-block-caption">
+  <span class="src-block-number"><a href="#code-snippet--1-6--2">Code Snippet 34</a></span>:
+  Calculate compound interest
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Amount = 1000.00, Rate = 0.06, Years = 5.00
+	Year 1: 1060.00
+	Year 2: 1123.60
+	Year 3: 1191.02
+	Year 4: 1262.48
+	Year 5: 1338.23
+
+Amount = 1000.00, Rate = 0.12, Years = 7.00
+	Year 1: 1120.00
+	Year 2: 1254.40
+	Year 3: 1404.93
+	Year 4: 1573.52
+	Year 5: 1762.34
+	Year 6: 1973.82
+	Year 7: 2210.68</code></pre></div>
+
+        </div>
+    </div>
+</article>
+
+
+
+                <footer>
+                    
+
+
+
+
+<div class="no-text-decoration">
+    <div class="jump top"><a href="#" title="Top of this page">⮉</a></div>
+    <div class="jump bottom"><a href="#bottom" title="Bottom of this page">⮋</a></div>
+</div>
+
+
+ 
+    
+        <div class="hugotoc no-text-decoration">
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#simple-example">Simple example</a></li>
+<li><a href="#the-awk-programming-language">The AWK Programming Language</a>
+<ul>
+<li><a href="#an-awk-tutorial">An AWK Tutorial</a>
+<ul>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li><a href="#the-structure-of-an-awk-program">The Structure of an AWK Program</a></li>
+</ul></li>
+<li><a href="#simple-output">Simple Output</a>
+<ul>
+<li><a href="#printing-every-line">Printing Every Line</a></li>
+<li><a href="#printing-certain-fields">Printing Certain Fields</a></li>
+<li><a href="#nf-the-number-of-fields"><code>NF</code>, the Number of Fields</a></li>
+<li><a href="#computing-and-printing">Computing and Printing</a></li>
+<li><a href="#printing-line-numbers">Printing Line Numbers</a></li>
+<li><a href="#putting-text-in-the-output">Putting Text in the Output</a></li>
+</ul></li>
+<li><a href="#fancier-output">Fancier Output</a>
+<ul>
+<li><a href="#lining-up-fields">Lining Up Fields</a></li>
+</ul></li>
+<li><a href="#selection">Selection</a>
+<ul>
+<li><a href="#selection-by-comparison">Selection by Comparison</a></li>
+<li><a href="#selection-by-computation">Selection by Computation</a></li>
+<li><a href="#selection-by-text-content">Selection by Text Content</a></li>
+<li><a href="#combinations-of-patterns">Combinations of Patterns</a></li>
+<li><a href="#data-validation">Data Validation</a></li>
+<li><a href="#begin-and-end">BEGIN and END</a></li>
+</ul></li>
+<li><a href="#computing-with-awk">Computing with AWK</a>
+<ul>
+<li><a href="#counting">Counting</a></li>
+<li><a href="#computing-sums-and-averages">Computing Sums and Averages</a></li>
+<li><a href="#handling-text">Handling Text</a></li>
+<li><a href="#string-concatenation">String Concatenation</a></li>
+<li><a href="#printing-the-last-input-line">Printing the Last Input Line</a></li>
+<li><a href="#built-in-functions">Built-in Functions</a></li>
+<li><a href="#counting-lines-words-and-characters">Counting Lines, Words and Characters</a></li>
+</ul></li>
+<li><a href="#control-flow-statements">Control-Flow Statements</a>
+<ul>
+<li><a href="#if-else-statement">If-Else Statement</a></li>
+<li><a href="#while-statement">While Statement</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+    
+    
+<script src="/refined/js/libs/jquery/3.3.1/jquery.slim.min.min.528a9ce56371729e50605653bf72b1e933574cdb97519529bf8fab01b63f9703.js"></script>
+
+<link rel="preload" href="/refined/js/libs/jquery/3.3.1/jquery.slim.min.min.528a9ce56371729e50605653bf72b1e933574cdb97519529bf8fab01b63f9703.js" as="script">
+
+<script type="application/javascript">(function() {
+     var $window = $(window);
+     if ($window.width() >= 1400) { 
+         var $toc = $('#TableOfContents');
+         if ($toc.length > 0) {
+             function onScroll(){
+                 var currentScroll = $window.scrollTop();
+                 var h = $('.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .h-feed h2');
+                 var id = "";
+                 h.each(function (i, e) {
+                     e = $(e);
+                     if (e.offset().top - 10 <= currentScroll) {
+                         id = e.attr('id');
+                     }
+                 });
+                 var current = $toc.find('a.current');
+                 if (current.length == 1 && current.eq(0).attr('href') == '#' + id) return true;
+
+                 current.each(function (i, e) {
+                     $(e).removeClass('current').siblings('ul').hide();
+                 });
+                 $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                     $(e).children('a').addClass('current').siblings('ul').show();
+                 });
+             }
+             $window.on('scroll', onScroll);
+             $(document).ready(function() {
+                 $toc.find('a').parent('li').find('ul').hide();
+                 onScroll();
+                 document.getElementsByClassName('hugotoc')[0].style.display = '';
+             });}}})();</script>
+
+
+
+
+
+
+
+
+<div class="backtotop center no-text-decoration">
+    <a href="#">back to <span class="top">top</span></a>
+</div>
+
+
+<div class="right">
+    <div class="taxo no-text-decoration">
+         
+            
+                <ul class="no-bullets inline categories">
+                    
+                        
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            <li class="__unix__"
+                                
+                                
+                                title="This is the only post categorized in ‘unix’"
+                                
+                            >
+                                <a class="p-category" href="https://randomwalk94.github.io/refined/categories/unix/">unix</a>
+                            </li>
+                        
+                    
+                </ul>
+            
+         
+            
+         
+            
+                <ul class="no-bullets inline tags">
+                    
+                        
+                        
+                        
+                            
+                            
+                            
+                            
+                            
+                            <li class="__awk__"
+                                
+                                
+                                title="This is the only post tagged with ‘awk’"
+                                
+                            >
+                                <a class="p-category" href="https://randomwalk94.github.io/refined/tags/awk/">awk</a>
+                            </li>
+                        
+                    
+                </ul>
+            
+        
+    </div>
+
+</div>
+<div class="clear-float"></div>
+
+
+
+<div class="prev-next-navigator clear-float">
+    
+    
+        <span class="next-post right no-text-decoration">
+            <a href="https://randomwalk94.github.io/refined/posts/demo/" class="nobr">LaTeX in HTML »</a>
+        </span>
+    
+</div>
+
+
+<a id="bottom"></a>
+
+
+
+
+
+
+
+
+
+                       
+
+
+
+
+
+
+
+                    <ul class="no-bullets feed right inline">
+    
+</ul>
+<div class="clear-float"></div>
+
+                </footer>
+                <hr />
+            </div>               
+
+            <footer> 
+                
+
+<ul class="social no-text-decoration">
+    
+        <li>
+            <a href="https://github.com/kaushalmodi/" title="Github">
+                
+                
+                    
+                    
+                    
+                    <i class="fab fa-2x fa-github"></i>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://gitlab.com/users/kaushalmodi/projects" title="Gitlab">
+                
+                
+                    
+                    
+                    
+                    <i class="fab fa-2x fa-gitlab"></i>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://news.ycombinator.com/user?id=kaushalmodi" title="Hacker News">
+                
+                
+                    
+                    
+                    
+                    <i class="fab fa-2x fa-hacker-news"></i>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://twitter.com/kaushalmodi/" title="Twitter">
+                
+                
+                    
+                    
+                    
+                    <i class="fab fa-2x fa-twitter"></i>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://mastodon.technology/@kaushalmodi" title="Mastodon">
+                
+                
+                    
+                    
+                    
+                    <i class="fab fa-2x fa-mastodon"></i>
+                
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://keybase.io/kaushalmodi" title="Keybase.io">
+                
+                
+                    
+                    
+                    
+                    <i class="fab fa-2x fa-keybase"></i>
+                
+            </a>
+        </li>
+    
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="generated no-text-decoration">
+    Generated using  <a href="https://gitlab.com/kaushalmodi/hugo-theme-refined"><code class="nobr">hugo-theme-refined</code></a> + <span class="nobr">Hugo 0.55.0</span>
+</p>
+
+<p>
+    
+</p>
+
+
+
+
+<div class="badges no-text-decoration">
+    
+    
+
+    
+</div>
+
+
+
+
+<script type="application/javascript">var nav=responsiveNav("#nav");</script>
+
+
+
+
+<script defer src="/refined/js/libs/fragmentions/wrapper.min.4c511209cd3786314b251d891c8da528b47a972669aa4eea416b64d4be01eee2.js"></script>
+
+
+
+
+
+
+
+
+
+            </footer>
+        </div> 
+    </body>
+</html>
