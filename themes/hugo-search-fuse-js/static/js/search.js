@@ -26,7 +26,7 @@ if(searchQuery){
     $("#search-query").val(searchQuery);
     executeSearch(searchQuery);
 }else {
-    $('#search-results').append("<p class=\"no-results\">Please enter a word or phrase above</p>");
+    $('#search-results').append("<p class=\"no-results\">Search query can be any word or phrase.</p>");
 }
 
 function executeSearch(searchQuery){
