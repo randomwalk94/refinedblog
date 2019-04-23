@@ -71,7 +71,7 @@ A list of useful links, in no particular order.
 [The Long Game Part 2: the missing chapter](https://vimeo.com/channels/staffpicks/87448006)  
 
 ### Vietnamese Websites
-[Làm thế nào để luôn cập nhật kiến thức trong lĩnh vực Machine Learning?](https://viblo.asia/p/question-lam-the-nao-de-luon-cap-nhat-kien-thuc-trong-linh-vuc-machine-learning-maGK7mBxlj2) 
+[Làm thế nào để luôn cập nhật kiến thức trong lĩnh vực Machine Learning?](https://viblo.asia/p/question-lam-the-nao-de-luon-cap-nhat-kien-thuc-trong-linh-vuc-machine-learning-maGK7mBxlj2)   
 [Tài liệu machine learning](https://forum.machinelearningcoban.com/t/tong-hop-tai-lieu-machine-learning-cho-nguoi-moi-bat-dau/537)
 
 ### Coding Preparation
