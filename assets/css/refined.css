@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Niramit');
+@import url('https://fonts.googleapis.com/css?family=Faustina');
 
 /* Wed Oct 12 11:56:47 EDT 2016 - kmodi */
 
@@ -625,7 +626,7 @@ html {
 body {
     font-weight: 400;
     font-size: 115%;
-    font-family: 'Niramit', serif;
+    font-family: 'Faustina';
     background: transparent;
     padding-bottom: 2rem;
 }
