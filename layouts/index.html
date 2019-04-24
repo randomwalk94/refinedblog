@@ -1,5 +1,27 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"{{ with site.LanguageCode }} xml:lang="{{ . }}" lang="{{ . }}"{{ end }}>
 
+    {{ partial "head.html" . }}
+
+    <body lang="en">
+
+        <!-- Top color border of the page -->
+        <div class="border" id="home"></div>
+
+        <div class="wrapper">   <!--Used by responsive-nav-orig.js -->
+            {{ partial "navbar.html" . }}
+            <img src="/images/favicon.png" alt="little fox" style="width:256px">
+            <div class="container">
+                <header class="masthead">
+                    <div class="masthead-title no-text-decoration">
+                        <a href="/">{{ site.Title }}</a> <span class="blinking-cursor">❚</span>
+                    </div>
+                    <div class="masthead-tagline">
+                        {{ site.Params.tagline }}. <a href="/notes/about/">Something about me</a>. <a href="/categories">Categories</a>. <a href="/notes/resources/">Resources</a>.
+                    </div>
+                </header>
+
+                
 <div class="posts h-feed">
     <header>
         <!-- To complete the h-feed meta-data -->
@@ -13,11 +35,9 @@
     {{ end }}
 </div>
 
-{{ end }}
 
-{{ define "footer" }}
-
-<div class="pagination no-text-decoration">
+                <footer>
+                    <div class="pagination no-text-decoration">
     {{ if .Paginator.HasPrev }}
         <a class="pagination-item newer" href="{{ .Paginator.Prev.URL }}">Newer</a>
     {{ else }}
@@ -35,4 +55,59 @@
     {{ partial "webmention_rcv.html" . }}
 {{ end }}
 
-{{ end }}
+
+                    {{ partial "feed.html" . }}
+                </footer>
+                <hr />
+            </div>               <!-- Closing <div class="container"> -->
+
+            <footer> <!-- Footer outside the .container, not bound by max-width -->
+                {{ partial "footer.html" . }}
+            </footer>
+        </div> <!-- - Closing <div class="wrapper"> -->
+    </body>
+</html>
+
+
+
+
+
+<!--{{ define "main" }}-->
+
+<!--<div class="posts h-feed">-->
+    <!--<header>-->
+        <!--[> To complete the h-feed meta-data <]-->
+        <!--<data class="u-url" value="{{ .Permalink }}"></data>-->
+        <!--{{ partial "author.html" (dict "page" . "fmt" "u-author") }}-->
+        <!--<data class="p-name" value="{{ .Title }}"></data>-->
+    <!--</header>-->
+    <!--[> http://justindunham.net/blog-bells-and-whistles-in-hugo/ <]-->
+    <!--{{ range where (.Paginator 10).Pages "Type" "in" site.Params.mainSections }}-->
+        <!--{{ .Render "summary"}}      [> Use layouts/_default/summary.html <]-->
+    <!--{{ end }}-->
+<!--</div>-->
+
+<!--{{ end }}-->
+
+<!--{{ define "footer" }}-->
+
+<!--<div class="pagination no-text-decoration">-->
+    <!--{{ if .Paginator.HasPrev }}-->
+        <!--<a class="pagination-item newer" href="{{ .Paginator.Prev.URL }}">Newer</a>-->
+    <!--{{ else }}-->
+        <!--<span class="pagination-item newer">Newer</span>-->
+    <!--{{ end }}-->
+    <!--{{ if .Paginator.HasNext }}-->
+        <!--<a class="pagination-item older" href="{{ .Paginator.Next.URL }}">Older</a>-->
+    <!--{{ else }}-->
+        <!--<span class="pagination-item older">Older</span>-->
+    <!--{{ end }}-->
+<!--</div>-->
+
+<!--{{ if (eq 1 .Paginator.PageNumber) }}-->
+    <!--[> Receive Webmentions <]-->
+    <!--{{ partial "webmention_rcv.html" . }}-->
+<!--{{ end }}-->
+
+<!--{{ end }}-->
+
