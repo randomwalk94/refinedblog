@@ -2183,9 +2183,9 @@ div.note p {
 }
 
 /* Highlight for fragmentions */
-[fragmention] {
-    background: var(--grey-bg);
-}
+/*[fragmention] {*/
+    /*background: var(--grey-bg);*/
+/*}*/
 
 /* Search */
 .search h1 {
