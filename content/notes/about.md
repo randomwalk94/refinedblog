@@ -17,3 +17,5 @@ curl -L http://bit.ly/10hA8iC | bash
 ```
 
 [Curriculum Vitae](/files/CV_HaiLe.pdf)
+
+[Akuna Sneek Peek](https://akunacapital.com/job-details?gh_jid=1720732)
