@@ -43,6 +43,10 @@ A list of useful links, in no particular order.
 [Python for Finance: Algorithmic Trading](https://www.datacamp.com/community/tutorials/finance-python-trading)  
 [Quantopian](https://www.quantopian.com/lectures)  
 
+
+### Trading
+[Kelly's criterion and the stock market](http://www.edwardothorp.com/wp-content/uploads/2016/11/TheKellyCriterionAndTheStockMarket.pdf)  
+
 ### Academic Websites
 
 [NSF Math Grants](https://www.nsf.gov/awards/award_visualization.jsp?org=DMS)  
