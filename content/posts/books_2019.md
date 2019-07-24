@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-This is the list of books I have read (and finished) so far in 2019. The list is in no particular order. 
+This is the list of books I have read (and finished) so far in 2019. 
 
 <!--more-->
 
