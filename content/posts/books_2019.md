@@ -12,7 +12,7 @@ This is the list of books I have read (and finished) so far in 2019. The list is
 
 <!--more-->
 
-Authors | Title | 
+| Authors | Title | 
 |-|-|
 |Andrew Yang| [The War on Normal People](https://www.amazon.com/War-Normal-People-Disappearing-Universal/dp/0316414247)|
 |James O. Weatherall|[The Physics of Wall Street](https://www.amazon.com/Physics-Wall-Street-Predicting-Unpredictable/dp/0544112431)|
