@@ -8,12 +8,13 @@ tags:
 draft: false
 ---
 
-This is the list of books I have read (and finished) so far in 2019. The list is in no particular order.
+This is the list of books I have read (and finished) so far in 2019. The list is in no particular order. 
 
 <!--more-->
 
-| Authors | Title | 
-|---|---|
-|Andrew Yang| [The War on Normal People](https://www.amazon.com/War-Normal-People-Disappearing-Universal/dp/0316414247)|
-|James O. Weatherall|[The Physics of Wall Street](https://www.amazon.com/Physics-Wall-Street-Predicting-Unpredictable/dp/0544112431)|
-|Edward O. Thorp|[A Man for All Markets](https://www.amazon.com/Man-All-Markets-Street-Dealer/dp/1400067960)|
+ Authors | Titles 
+ :--- | :--- 
+ Andrew Yang |*[The War on Normal People](https://www.amazon.com/War-Normal-People-Disappearing-Universal/dp/0316414247)*
+ James Weatherall |*[The Physics of Wall Street](https://www.amazon.com/Physics-Wall-Street-Predicting-Unpredictable/dp/0544112431)* 
+ Edward Thorp |*[A Man for All Markets](https://www.amazon.com/Man-All-Markets-Street-Dealer/dp/1400067960)*
+
