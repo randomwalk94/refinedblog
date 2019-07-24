@@ -19,4 +19,6 @@ This is the list of books I have read (and finished) so far in 2019.
  Edward Thorp |*[A Man for All Markets](https://www.amazon.com/Man-All-Markets-Street-Dealer/dp/1400067960)*
 Nate Silver | *[The Signal and The Noise](https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but-ebook/dp/B007V65R54)*
 
+## Notes
 
+- Weather forecasting is like NASCAR race (from Loft in Nate Silver's): Initial conditions provide no values for prediction, just like in chaos theory.  
