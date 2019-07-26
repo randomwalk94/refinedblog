@@ -16,6 +16,6 @@ Here is something interesting: paste the following command into your terminal to
 curl -L http://bit.ly/10hA8iC | bash
 ```
 
-[Curriculum Vitae](/files/CV_HaiLe.pdf)
+[Curriculum Vitae](/files/CV_HaiLe.pdf)  
 
-[Akuna Sneek Peek](https://akunacapital.com/job-details?gh_jid=1720732)
+[Books I have read in 2019](/posts/books_2019/)
