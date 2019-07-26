@@ -23,3 +23,4 @@ Nate Silver | *[The Signal and The Noise](https://www.amazon.com/Signal-Noise-Ma
 
 - Weather forecasting is like NASCAR race (from Loft in Nate Silver's): Initial conditions provide no values for prediction, just like in chaos theory.  
 - The largest *Ponzi scheme* belongs to [Bernard L. Madoff](https://en.wikipedia.org/wiki/Madoff_investment_scandal).
+- The Japanese word "*kamikaze*" (神風) means "*divine wind*," referring to the major typhoons that invaded Japan in 1274.
