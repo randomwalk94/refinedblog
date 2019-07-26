@@ -1,6 +1,7 @@
 {{ $page_params := .Params }}
 
 {{ partialCached "social.html" . }}
+{{ partial "mathjax_support.html" . }}
 
 {{ $ox_hugo_string := "" }}
 {{ $source_string := "" }}
