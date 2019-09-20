@@ -37,7 +37,8 @@ A list of useful links, in no particular order.
 ### Coding Websites
 [10 Coding Challenge Websites](https://medium.com/coderbyte/the-10-best-coding-challenge-websites-for-2018-12b57645b654)  
 [Youtube - Python for Finance](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcOdF96TBtRtuQksErCEBYZ)  
-[Financial Modelling - ECON 136 Harvey Mudd College](https://www.palmislandtraders.com/econ136/e136lit.htm)  
+[Financial Modelling - ECON 136 Harvey Mudd College](https://www.palmislandtraders.com/econ136/e136lit.htm) 
+[Caltech CS 156](https://www.youtube.com/playlist?list=PLD63A284B7615313A)  
 
 ### Algorithmic Trading 
 [Python for Finance: Algorithmic Trading](https://www.datacamp.com/community/tutorials/finance-python-trading)  
