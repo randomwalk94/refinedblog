@@ -498,7 +498,7 @@ tbody tr:nth-child(odd) th {
 /* Prevent scroll on narrow devices */
 html,
 body {
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 /* Headings */
