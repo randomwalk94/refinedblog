@@ -33,7 +33,8 @@ A list of useful links, in no particular order.
 [Altair: Declarative Visualization in Python](https://altair-viz.github.io/)  
 [Sebastian Ruder](Sebastian Ruder)  
 [ML Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials)  
-[Caltech CS 156](https://www.youtube.com/playlist?list=PLD63A284B7615313A)  
+[Caltech CS 156](https://www.youtube.com/playlist?list=PLD63A284B7615313A) 
+[Chris Albon's Techniques in Data Science](https://chrisalbon.com/)  
 
 ### Coding Websites
 [10 Coding Challenge Websites](https://medium.com/coderbyte/the-10-best-coding-challenge-websites-for-2018-12b57645b654)  
