@@ -46,6 +46,7 @@ A list of useful links, in no particular order.
 ### Algorithmic Trading 
 [Python for Finance: Algorithmic Trading](https://www.datacamp.com/community/tutorials/finance-python-trading)  
 [Quantopian](https://www.quantopian.com/lectures)  
+[JP Morgan Virtual Experience](https://www.insidesherpa.com/virtual-internships/prototype/R5iK7HMxJGBgaSbvk/Technology%20Virtual%20Experience)  
 
 
 ### Trading
