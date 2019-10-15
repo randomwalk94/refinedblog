@@ -36,7 +36,8 @@ A list of useful links, in no particular order.
 [Caltech CS 156](https://www.youtube.com/playlist?list=PLD63A284B7615313A)   
 [Chris Albon's Techniques in Data Science](https://chrisalbon.com/)  
 [Geographic Data Science at Univ of Liverpool](http://darribas.org/gds15/)  
-[Data Analysis in Python](http://www.data-analysis-in-python.org/)
+[Data Analysis in Python](http://www.data-analysis-in-python.org/)  
+[Data Analytics at Wish](https://medium.com/wish-engineering/scaling-analytics-at-wish-619eacb97d16)  
 
 ### Coding Websites
 [10 Coding Challenge Websites](https://medium.com/coderbyte/the-10-best-coding-challenge-websites-for-2018-12b57645b654)  
