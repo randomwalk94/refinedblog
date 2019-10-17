@@ -817,14 +817,14 @@ h6 .section-num {
 /* * Block quotes */
 .description,
 blockquote {
-    font-family: Source Sans Pro;
+    font-family: Open Sans;
     font-style: italic;
     margin-left: 1em;             /* Space to the left of the vertical line */
     padding-left: 1em;            /* Space to the right of the vertical line */
     padding-right: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 .description {
     border-left: 4px solid var(--theme-color); /* Vertical line on the left */
