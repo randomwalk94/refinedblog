@@ -102,7 +102,8 @@ A list of useful links, in no particular order.
 
 
 ### Interesting Math  
-[\\(\prod(p^2+1)/(p^2-1)\\)](https://mathoverflow.net/questions/164092/computing-prod-p-fracp2-1p21-without-the-zeta-function)
+[\\(\prod(p^2+1)/(p^2-1)\\)](https://mathoverflow.net/questions/164092/computing-prod-p-fracp2-1p21-without-the-zeta-function)   
+[Concentration Inequalities for Product of Random Matrices](https://arxiv.org/pdf/1907.05833.pdf)  
 
 ### Collaboration tools
 [Shift - Manage multiple accounts](https://tryshift.com/)  
