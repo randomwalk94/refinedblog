@@ -38,7 +38,7 @@ A list of useful links, in no particular order.
 [Geographic Data Science at Univ of Liverpool](http://darribas.org/gds15/)  
 [Data Analysis in Python](http://www.data-analysis-in-python.org/)  
 [Data Analytics at Wish](https://medium.com/wish-engineering/scaling-analytics-at-wish-619eacb97d16)  
-[Data Science at Aalto](https://medium.com/@teightd.68/master-acadamia-aalto-university-part1-a6a693fe5cfd) 
+[Data Science at Aalto](https://medium.com/@teightd.68/master-acadamia-aalto-university-part1-a6a693fe5cfd)  
 [Off the convex path Blog](http://www.offconvex.org/)  
 
 ### Coding Websites
