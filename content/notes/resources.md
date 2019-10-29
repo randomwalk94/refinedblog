@@ -41,6 +41,9 @@ A list of useful links, in no particular order.
 [Data Science at Aalto](https://medium.com/@teightd.68/master-acadamia-aalto-university-part1-a6a693fe5cfd)  
 [Off the convex path Blog](http://www.offconvex.org/)  
 [ML at CMU](https://blog.ml.cmu.edu/)  
+[Deep Bayes Summer School at HSE](https://www.youtube.com/playlist?list=PLe5rNUydzV9QHe8VDStpU0o8Yp63OecdW)  
+[AirGesture - Playing without Touching](https://github.com/nhviet1009/AirGesture)  
+[Harvard CS109 Data Science 1](https://canvas.harvard.edu/courses/29726)  
 
 ### Coding Websites
 [10 Coding Challenge Websites](https://medium.com/coderbyte/the-10-best-coding-challenge-websites-for-2018-12b57645b654)  
