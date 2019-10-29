@@ -25,6 +25,7 @@ A list of useful links, in no particular order.
 [Lorenzo Zambotti](http://www.lpsm.paris/dw/doku.php?id=users:zambotti:index)  
 [Chris Rackauckas](http://chrisrackauckas.com/)  
 [Djalil Chafaï](http://djalil.chafai.net/blog/)  
+[Learn Anything](https://learn-anything.xyz/)  
 
 ### Machine Learning Websites
 
