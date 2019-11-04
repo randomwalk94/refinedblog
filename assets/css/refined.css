@@ -637,7 +637,7 @@ html {
 body {
     font-weight: 400;
     font-size: 110%;
-    font-family: 'Open Sans';
+    font-family: 'Roboto';
     background: transparent;
     padding-bottom: 2rem;
 }
@@ -817,7 +817,7 @@ h6 .section-num {
 /* * Block quotes */
 .description,
 blockquote {
-    font-family: Open Sans;
+    font-family: Arial;
     font-style: italic;
     margin-left: 1em;             /* Space to the left of the vertical line */
     padding-left: 1em;            /* Space to the right of the vertical line */
