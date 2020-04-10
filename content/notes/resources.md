@@ -86,7 +86,8 @@ A list of useful links, in no particular order.
 [Way to Mathematical Writing](http://tex.loria.fr/typographie/mathwriting.pdf)  
 [Linear Thinking in a Nonlinear World](https://hbr.org/2017/05/linear-thinking-in-a-nonlinear-world)  
 [The Long Game Part 2: the missing chapter](https://vimeo.com/channels/staffpicks/87448006)  
-[WTF Visualizations](https://viz.wtf/)
+[WTF Visualizations](https://viz.wtf/)  
+[Junk Charts](https://junkcharts.typepad.com/junk_charts/)  
 
 ### Vietnamese Websites
 [Làm thế nào để luôn cập nhật kiến thức trong lĩnh vực Machine Learning?](https://viblo.asia/p/question-lam-the-nao-de-luon-cap-nhat-kien-thuc-trong-linh-vuc-machine-learning-maGK7mBxlj2)   
