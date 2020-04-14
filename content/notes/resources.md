@@ -26,6 +26,7 @@ A list of useful links, in no particular order.
 [Chris Rackauckas](http://chrisrackauckas.com/)  
 [Djalil Chafaï](http://djalil.chafai.net/blog/)  
 [Learn Anything](https://learn-anything.xyz/)  
+[Mathematics Seminars Online](https://mathseminars.org/)  
 
 ### Machine Learning Websites
 
