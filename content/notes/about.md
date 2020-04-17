@@ -24,5 +24,6 @@ curl -L http://bit.ly/10hA8iC | bash
 
 - [UCLA Distinguished Lecture Series - Martin Hairer](https://www.math.ucla.edu/dls)  
 - [Columbia University Probability Seminars](https://www.math.columbia.edu/department/probability/seminar/prob_sem_global.html)  
-- [Algebraic Combinatorics Seminars](http://dermenjian.com/seminars/)
+- [Algebraic Combinatorics Seminars](http://dermenjian.com/seminars/)  
+- [Junior Integrable Probability Seminar](https://sites.google.com/view/junior-ips)
 
