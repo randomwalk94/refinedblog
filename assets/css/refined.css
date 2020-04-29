@@ -148,7 +148,7 @@
     --secondary-font: var(--linux-biolinum);
     --tertiary-font: var(--source-sans-pro);
     --mono: var(--iosevka);
-    --italic: 'Roboto';
+    --italic: 'Georgia';
     --symbola: 'Symbola';
 }
 
@@ -637,7 +637,7 @@ html {
 body {
     font-weight: 400;
     font-size: 110%;
-    font-family: 'Roboto';
+    font-family: 'Georgia';
     background: transparent;
     padding-bottom: 2rem;
 }
