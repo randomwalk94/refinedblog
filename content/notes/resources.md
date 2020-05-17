@@ -27,6 +27,7 @@ A list of useful links, in no particular order.
 [Djalil Chafaï](http://djalil.chafai.net/blog/)  
 [Learn Anything](https://learn-anything.xyz/)  
 [Mathematics Seminars Online](https://mathseminars.org/)  
+[Azimuth - John Baez's Blog](https://johncarlosbaez.wordpress.com/)  
 
 ### Machine Learning Websites
 
