@@ -119,4 +119,6 @@ A list of useful links, in no particular order.
 [Shift - Manage multiple accounts](https://tryshift.com/)  
 [Airtable - Organized spreadsheet](https://airtable.com/)
 
+### Unusual vocabulary
+*Schadenfreude*: the experience of pleasure, joy, or self-satisfaction that comes from learning of or witnessing the troubles, failures, or humiliation of another. ([source](https://en.wikipedia.org/wiki/Schadenfreude))
 
